@@ -1,9 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .gallery {
   max-width: 1128px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin: 24px 156px;
+  margin: 24px auto;
 }
 
 .gallery li {
@@ -15,11 +21,9 @@
   height: 200px;
   gap: 0px;
   opacity: 0px;
+  transition: all ease-in 0.2s;
 }
 
 .gallery-image:hover {
-    width: 376px;
-  height: 208px;
-  gap: 0px;
-  opacity: 0px;
+  scale: 1.05;
 }
