@@ -84,20 +84,20 @@ const galleryMap = images
 
 gallery.insertAdjacentHTML('beforeend', galleryMap);
 
-gallery.addEventListener("click", imageClicked);
+gallery.addEventListener('click', imageClicked);
 function imageClicked(event) {
-    event.preventDefault();
-    const imageData = event.target;
-    const instance = basicLightbox.create(`
-		<img width="1400" height="900" src="${imageData.dataset.source}">
+  event.preventDefault();
+  const imageOpened = event.target;
+  const instance = basicLightbox.create(`
+		<img width="1400" height="900" src="${imageOpened.dataset.source}">
 	`);
-    if (imageData.tagName === "IMG") {
-        instance.show(
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "Escape") {
-                    instance.close();
-                }
-            })
-        );
-    };
+  if (imageOpened.tagName === 'IMG') {
+    instance.show(
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          instance.close();
+        }
+      })
+    );
+  }
 }
