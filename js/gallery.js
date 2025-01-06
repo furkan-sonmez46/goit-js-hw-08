@@ -70,11 +70,11 @@ const gallery = document.querySelector(".gallery");
 const galleryMap = images
   .map(
     image => `<li class="gallery-item">
-  <a class="gallery-link" href="${image.preview.original.slice(1, -1)}">
+  <a class="gallery-link" href="${image.preview.slice(1,-1)}">
     <img
       class="gallery-image"
-      src="${image.preview.slice(1, -1)}"
-      data-source="${image.preview.original.slice(1, -1)}"
+      src="${image.preview.slice(1,-1)}"
+      data-source="${image.original.slice(1,-1)}"
       alt="${image.preview.description}"
     />
   </a>
