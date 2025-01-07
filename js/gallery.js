@@ -74,7 +74,7 @@ const galleryMap = images
       class="gallery-image"
       src="${image.preview.slice(1, -1)}"
       data-source="${image.original.slice(1, -1)}"
-      alt="${image.preview.description}"
+      alt="${image.description}"
     />
   </a>
 </li>
